@@ -13,12 +13,12 @@ function App() {
   function addBlogTitle(e) {
     e.preventDefault()
     console.log(blogsTitles);
-    
+
     setBlogsTitles([
       ...blogsTitles,
       newBlogTitle
     ])
-    
+
     setNewBlogTitle('')
   }
 
@@ -44,7 +44,8 @@ function App() {
 
         </form>
         <ul className="list-group">
-          <li className="list-group-item"></li>
+          {blogsTitles.map((blogTitle, index) => <li key={index} className="list-group-item">{blogTitle}</li>)}
+
         </ul>
 
       </div>
